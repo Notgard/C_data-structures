@@ -68,9 +68,9 @@ void list_delete(LIST list, CELL cell) {
 /// @param list the linked list to search
 /// @param value value to search in list
 /// @return 
-CELL list_search(LIST list, int value) {
+CELL list_search(LIST list, char * value) {
     CELL c = cell_init();
-    for(c = list->head; c != NULL && c->key != value; c = c->next);
+    for(c = list->head; c != NULL && strcmp(c->key, value); c = c->next);
     return c;
 }
 
@@ -88,7 +88,7 @@ void list_free(LIST list) {
 /// @brief Counts the amount of items in a linked list
 /// @param list 
 /// @return total amount of items in a list
-int compter_liste(LIST list) {
+int list_count(LIST list) {
     int count = 0;
     if(list == (LIST)NULL) return count;
     for(CELL c = list->head; c != NULL; c = c->next, count++);

@@ -20,10 +20,10 @@ void list_insert(LIST, CELL);
 
 void list_delete(LIST, CELL);
 
-CELL list_search(LIST, int);
+CELL list_search(LIST, char *);
 
 void list_free(LIST);
 
 int list_count(LIST);
 
-#endif __LIST_H__ // __LIST_H__
+#endif // __LIST_H__

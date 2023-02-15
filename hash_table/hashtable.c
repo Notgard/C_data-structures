@@ -13,7 +13,7 @@ HASHTABLE hashtable_init(int m)
     hash_table->hash = m;
     hash_table->collision = (LIST *)malloc(sizeof(List) * m);
     for(int i = 0; i < hash_table->size; i++) {
-        hash_table->collision[i] = (LISTE)NULL;
+        hash_table->collision[i] = (LIST)NULL;
     }
     return hash_table;
 }
@@ -91,7 +91,7 @@ void hashtable_insert(HASHTABLE table, CELL word)
     int index = hashtable_hash(table, ascii);
     if (table->collision[index] == NULL)
     {
-        table->collision[index] = list_init();
+        table->collision[index] = list_create();
     }
     list_insert(table->collision[index], word);
 }

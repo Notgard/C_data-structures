@@ -6,7 +6,7 @@ CELL cell_init() {
     return (CELL)NULL;
 }
 
-CELL cell_create(char cell_value[MAX_SIZE]) {
+CELL cell_create(char * cell_value) {
     CELL cell = (CELL)malloc(sizeof(Cell));
     strcpy(cell->key, cell_value);
     cell->prev = cell_init();
@@ -15,5 +15,5 @@ CELL cell_create(char cell_value[MAX_SIZE]) {
 }
 
 void cell_print(CELL cell) {
-    printf("%d ", cell->key);
+    printf("%s ", cell->key);
 }

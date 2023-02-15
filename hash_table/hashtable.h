@@ -33,4 +33,4 @@ void hashtable_delete(HASHTABLE, CELL);
 
 int hashtable_count(HASHTABLE);
 
-#endif __HASHTABLE_H__ //__HASHTABLE_H__
+#endif //__HASHTABLE_H__
